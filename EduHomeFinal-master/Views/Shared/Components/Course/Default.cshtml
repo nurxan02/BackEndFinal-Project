@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Courses>
+<div class="row">
+    @foreach (Courses courses in Model)
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-course mb-70">
+                <div class="course-img">
+                    <a>
+                        <img src="~/Assets/img/course/@courses.Image" alt="course">
+                        <div class="course-hover">
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="course-content">
+                    
+                    <h3><a href="/Course/Detail/@courses.Id">@courses.Name</a></h3>
+                    <p>@courses.Description</p>
+                    <a class="default-btn" href="/Course/Detail/@courses.Id">read more</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

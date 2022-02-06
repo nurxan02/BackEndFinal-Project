@@ -1,0 +1,77 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@section style{
+
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+
+}
+
+<div class="teacher-details-area pt-150 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="teacher-details-img">
+                    <img src="~/Assets/img/event/@Model.Image" style="width:300px;height:250px;object-fit:cover;" alt="teacher">
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12">
+                <div class="teacher-details-content ml-50 ">
+                    <h2 class="text-black">@Model.Name</h2>
+                    <h5>@Model.Day, @Model.Month</h5>
+                    <h4 class="text-black">Event Description</h4>
+                    <p>@Model.EventAbout </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <ul class="h2" style="line-height:40px;">
+                    <li><span class="text-black">IsDeleted: </span>@Model.IsDeleted</li>
+                    <li><span class="text-black">EventPlace: </span>@Model.EventPlace</li>
+                    <li><span class="text-black">EventStart: </span>@Model.EventStart</li>
+                    <li><span class="text-black">EventFinish: </span>@Model.EventFinish</li>
+
+
+
+                </ul>
+            </div>
+            <div class="col-6">
+                <table class="table table-striped table-dark text-center" style="background-color:rgb(30, 30, 42)!important;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Surname</th>
+                            <th scope="col">Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="~/Assets/img/event/@Model.Speakers.ElementAt(0).Image" style="width:80px;height:80px;" alt="Alternate Text" /></td>
+                            <td>@Model.Speakers.ElementAt(0).FullName</td>
+                            <td>@Model.Speakers.ElementAt(0).Position</td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="~/Assets/img/event/@Model.Speakers.ElementAt(1).Image" style="width:80px;height:80px;" alt="Alternate Text" /></td>
+                            <td>@Model.Speakers.ElementAt(0).FullName</td>
+                            <td>@Model.Speakers.ElementAt(0).Position</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a asp-area="Admin" asp-controller="Event" asp-action="Index" class="btn btn-primary  w-25" style="float:right!important;">NewEvent List</a>
+</div>
+

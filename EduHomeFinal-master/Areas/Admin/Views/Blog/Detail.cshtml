@@ -1,0 +1,56 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Detail";
+}
+@section style{
+
+
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+
+
+}
+<div class="teacher-details-area pt-150 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="teacher-details-img">
+                    <img src="~/Assets/img/blog/@Model.Image" style="width:600px;height:550px;object-fit:cover;" alt="Blog">
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12">
+                <div class="teacher-details-content ml-50 ">
+                    <h2 class="text-white">@Model.Blogname</h2>
+                    <h5>@Model.BlogWriteTime</h5>
+                    <h4 class="text-white">Blog Description</h4>
+                    <p>@Model.Description </p>
+                    <div class="row">
+                        <table class="table table-dark text-center" style="background-color:rgb(30, 30, 42)!important;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Blog Author</th>
+                                    <th scope="col">CommentCount</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>@Model.Author</td>
+                                    <td>@Model.CommentCount</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <a asp-area="Admin" asp-controller="Blog" asp-action="Index" class="btn btn-primary  w-25" style="float:right!important;">Blog List</a>
+</div>
+

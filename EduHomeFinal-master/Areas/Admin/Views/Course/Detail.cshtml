@@ -1,0 +1,83 @@
+﻿@model Courses
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="teacher-details-area pt-150 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="teacher-details-img">
+                    <img src="~/Assets/img/course/@Model.Image" style="width:600px;height:450px;object-fit:cover;" alt="teacher">
+                </div>
+            </div>
+            <div class="col-8">
+                <h3>This Course About</h3>
+                <table class="table table-bordered table-dark " style="background-color:rgb(30, 30, 42)!important;">
+
+                    <tbody class="text-center text-white">
+
+                        <tr>
+                            <th scope="row">Duration</th>
+                            <td>@Model.Duration</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Class Duration</th>
+                            <td>@Model.ClassDuration</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Skill Level</th>
+                            <td>@Model.SkillLevel</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Language</th>
+                            <td>@Model.Language</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Student Capacity</th>
+                            <td>@Model.StudentCapacity</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Assetsment</th>
+                            <td>@Model.Assetsments</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Starts</th>
+                            <td>@Model.Starts</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Fee</th>
+                            <td>@Model.Fee $</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+
+                <div class="teacher-details-content ml-50 ">
+                    <h2 class="text-white">@Model.Name</h2>
+                    <h4 class="text-white">Description</h4>
+                    <p>@Model.Description </p>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <a asp-area="Admin" asp-controller="Course" asp-action="Index" class="btn btn-primary mt-3  w-25" style="float:right!important;">Course List</a>
+</div>
+
+

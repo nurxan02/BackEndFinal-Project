@@ -1,0 +1,118 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<AppUser> signinmanager;
+@model Bio
+@{
+    Layout = null;
+}
+
+<header class="top">
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="header-top-left">
+
+                        <p>HAVE ANY QUESTION ?  @Model.Contact</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="header-top-right text-right">
+                        @if (signinmanager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                            <ul>
+                                <li style="color:white;position:absolute;right:70%;"> <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin <i class="fas fa-user-cog ml-2"></i></a> </li>
+                            </ul>
+                        }
+
+
+                        <ul>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                <li style="position:relative;">
+                                    <a href="#"> @ViewBag.UserName</a>
+                                </li>
+
+                            }
+                            else
+                            {
+                                <li><a asp-controller="Account" asp-action="Login">login</a></li>
+                                <li><a asp-controller="Account" asp-action="SignUp">signup</a></li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-area two header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="logo">
+                        <a asp-controller="Home" asp-action="Index"><img src="~/Assets/img/logo/@Model.Image" alt="eduhome" /></a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-6">
+                    <div class="content-wrapper text-right">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="Index">Home</a>
+                                        
+                                    </li>
+                                    <li><a asp-controller="About" asp-action="Index">About</a></li>
+                                    <li>
+                                        <a asp-controller="Course" asp-action="Index">courses</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Event" asp-action="Index">event</a>
+                                        
+                                    </li>
+                                    <li class="hidden-sm">
+                                        <a asp-controller="Teacher" asp-action="Index">teacher</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Blog" asp-action="Index">blog</a>
+                                        
+                                    </li>
+                                    <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Search Form Start-->
+                        <div class="search-btn">
+                            <ul data-toggle="dropdown" class="header-search search-toggle">
+                                <li class="search-menu">
+                                    <i class="fa fa-search"></i>
+                                </li>
+                            </ul>
+                            <div class="search" id="searchlist">
+                                <div class="search-form">
+                                    <form id="search-form" action="#">
+                                        <input type="search" id="searchinput" placeholder="Search here..." name="search" />
+                                        <button type="submit">
+                                            <span><i class="fa fa-search"></i></span>
+                                        </button>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Search Form-->
+                        <!-- Main Menu End -->
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="mobile-menu hidden-lg hidden-md hidden-sm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

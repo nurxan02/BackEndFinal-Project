@@ -1,0 +1,227 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="title">Create Teacher</h3>
+                    </div>
+                    <div class="card-body w-100">
+                        <div class="row ">
+                            <div asp-validation-summary="ModelOnly" class="text-white"></div>
+                            <div class="col-md-12 px-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Name" class="ml-3"></label>
+                                    <input asp-for="Name" class="form-control" placeholder="Title">
+                                    <span asp-validation-for="Name"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Profession"></label>
+                                    <input asp-for="Profession" class="form-control" />
+                                    <span asp-validation-for="Profession"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Degree"></label>
+                                    <input asp-for="Degree" class="form-control" />
+                                    <span asp-validation-for="Degree"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Experience"></label>
+                                    <input asp-for="Experience" class="form-control" />
+                                    <span asp-validation-for="Experience"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Hobbies"></label>
+                                    <input asp-for="Hobbies" class="form-control" />
+                                    <span asp-validation-for="Hobbies"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Faculty"></label>
+                                    <input asp-for="Faculty" class="form-control" />
+                                    <span asp-validation-for="Faculty"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="ContactTel"></label>
+                                    <input asp-for="ContactTel" class="form-control" />
+                                    <span asp-validation-for="ContactTel"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="AboutMe"></label>
+                                    <input asp-for="AboutMe" class="form-control" />
+                                    <span asp-validation-for="AboutMe"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Mail"></label>
+                                    <input asp-for="Mail" class="form-control" />
+                                    <span asp-validation-for="Mail"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Skype"></label>
+                                    <input asp-for="Skype" class="form-control" />
+                                    <span asp-validation-for="Skype"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Facebook"></label>
+                                    <input asp-for="Facebook" class="form-control" />
+                                    <span asp-validation-for="Facebook"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Pinterest"></label>
+                                    <input asp-for="Pinterest" class="form-control" />
+                                    <span asp-validation-for="Pinterest"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Twitter"></label>
+                                    <input asp-for="Twitter" class="form-control" />
+                                    <span asp-validation-for="Twitter"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Instagram"></label>
+                                    <input asp-for="Instagram" class="form-control" />
+                                    <span asp-validation-for="Instagram"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container skillcontainer close">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.TeamLeader"></label>
+                                            <input asp-for="Skills.TeamLeader" class="form-control" />
+                                            <span asp-validation-for="Skills.TeamLeader"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.Language"></label>
+                                            <input asp-for="Skills.Language" class="form-control" />
+                                            <span asp-validation-for="Skills.Language"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.Development"></label>
+                                            <input asp-for="Skills.Development" class="form-control" />
+                                            <span asp-validation-for="Skills.Development"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.Design"></label>
+                                            <input asp-for="Skills.Design" class="form-control" />
+                                            <span asp-validation-for="Skills.Design"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.Innovation"></label>
+                                            <input asp-for="Skills.Innovation" class="form-control" />
+                                            <span asp-validation-for="Skills.Innovation"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-md-1">
+                                        <div class="form-group">
+                                            <label asp-for="Skills.Communication"></label>
+                                            <input asp-for="Skills.Communication" class="form-control" />
+                                            <span asp-validation-for="Skills.Communication"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary">Create</button>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="Teacher" asp-action="Index" asp-area="Admin"> Back </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <div class="author">
+                                <div class="form-group d-flex flex-column">
+                                    <label asp-for="PhotoTeacher" class="h2 text-white mb-5" style="font-size:18px;"></label>
+                                    <input asp-for="PhotoTeacher" accept="image/*" class="form-control">
+                                    <span asp-validation-for="PhotoTeacher" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

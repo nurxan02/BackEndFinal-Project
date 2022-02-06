@@ -1,0 +1,92 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="title">Create Blog</h3>
+                    </div>
+                    <div class="card-body w-100">
+
+                        <div class="row ">
+                            <div asp-validation-summary="ModelOnly" class="text-white"></div>
+                            <div class="col-md-12 px-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Blogname" class="ml-3"></label>
+                                    <input asp-for="Blogname" class="form-control" placeholder="Title">
+                                    <span asp-validation-for="Blogname"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Description"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="BlogWriteTime"></label>
+                                    <input asp-for="BlogWriteTime" class="form-control" />
+                                    <span asp-validation-for="BlogWriteTime"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="CommentCount"></label>
+                                    <input asp-for="CommentCount" class="form-control" />
+                                    <span asp-validation-for="CommentCount"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Author"></label>
+                                    <input asp-for="Author" class="form-control" />
+                                    <span asp-validation-for="Author"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary">Create</button>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="Blog" asp-action="Index" asp-area="Admin"> Back </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <div class="author">
+                                <div class="form-group d-flex flex-column">
+                                    <label asp-for="PhotoBlog" class="h2 text-white mb-5" style="font-size:18px;"></label>
+                                    <input asp-for="PhotoBlog" accept="image/*" class="form-control">
+                                    <span asp-validation-for="PhotoBlog " class="text-danger"></span>
+                                    <img src="~/img/AdminLogoUpload/instagram-logo.png" style="width:200px;height:200px;margin:0 auto;" id="uploadimage" alt="Alternate Text" />
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Blog>
+
+    @foreach (Blog blog in Model)
+    {
+
+            <div class="col-md-4 col-sm-6 hidden-xs ">
+                <div class="single-blog" style="height:433px!important;">
+                    <div class="blog-img" style="height:247px !important;">
+                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id"><img src="~/Assets/img/blog/@blog.Image" alt="blog"></a>
+                        <div class="blog-hover">
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-top">
+                            <p>@blog.Author/ @blog.BlogWriteTime /  <i class="fa fa-comments-o"></i> @blog.CommentCount</p>
+                        </div>
+                        <div class="blog-bottom">
+                            <h2><a href="blog-details.html">@blog.Blogname </a></h2>
+                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="col-md-4 hidden-sm col-xs-12">
+                <div class="single-blog" style="height:433px!important;">
+                    <div class="blog-img" style="height:247px !important;">
+                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id"><img src="~/Assets/img/blog/@blog.Image" alt="blog"></a>
+                        <div class="blog-hover">
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-top">
+                            <p>@blog.Author /  @blog.BlogWriteTime  /  <i class="fa fa-comments-o"></i> @blog.CommentCount</p>
+                        </div>
+                        <div class="blog-bottom">
+                            <h2><a href="blog-details.html">@blog.Blogname </a></h2>
+                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-blog mb-60" style="height:433px!important;">
+                    <div class="blog-img" style="height:247px !important;">
+                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id"><img src="~/Assets/img/blog/@blog.Image" alt="blog"></a>
+                        <div class="blog-hover">
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-top">
+                            <p>@blog.Author / @blog.BlogWriteTime /  <i class="fa fa-comments-o"></i> @blog.CommentCount</p>
+                        </div>
+                        <div class="blog-bottom">
+                            <h2><a href="blog-details.html">@blog.Blogname</a></h2>
+                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }

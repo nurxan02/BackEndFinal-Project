@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Event>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h2 class="card-title">NewEvent Table</h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr class="text-center font-weight-bold">
+                                    <th>
+                                        Image
+                                    </th>
+
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        EventStart
+                                    </th>
+                                    <th>
+                                        EventFinish
+                                    </th>
+
+                                    <th>
+                                        Settings
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="text-center font-weight-bold">
+                                @foreach (Event item in Model)
+                                {
+
+
+                                    <tr class="text-center imagecolon">
+
+                                        <td>
+                                            <img src="~/Assets/img/event/@item.Image" style="width:200px;height:250px;object-fit:cover;" alt="Alternate Text" />
+
+                                        </td>
+                                        <td>
+                                            @item.Name
+                                        </td>
+                                        <td>
+                                            @item.EventStart
+                                        </td>
+                                        <td>
+                                            @item.EventFinish
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary my-1 mx-1 float-right btn-sm" asp-controller="Event" asp-action="Detail" asp-area="Admin" asp-route-id="@item.Id"> Detail </a>
+                                            <a class="btn btn-primary my-1 mx-2 float-right btn-sm" asp-controller="Event" asp-action="Update" asp-area="Admin" asp-route-id="@item.Id"> Update </a>
+
+                                            <a class="btn btn-primary my-1  mx-1 float-right btn-sm neweventdelete" Id="@item.Id"> Delete </a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="Dashboard" asp-action="Index" asp-area="Admin"> Back </a>
+                        <a class="btn btn-primary my-1 mx-2 float-right " asp-controller="Event" asp-action="Create" asp-area="Admin"> Create </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

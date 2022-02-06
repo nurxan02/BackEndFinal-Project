@@ -1,0 +1,160 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="title">Update NewEvent</h3>
+                        <h3>Old Image</h3>
+                        <img src="~/img/event/@Model.Image" alt="Alternate Text" />
+                    </div>
+                    <div class="card-body w-100">
+
+                        <div class="row ">
+                            <div asp-validation-summary="ModelOnly" class="text-white"></div>
+                            <div class="col-md-12 px-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Name" class="ml-3"></label>
+                                    <input asp-for="Name" class="form-control" placeholder="Title">
+                                    <span asp-validation-for="Name"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Description"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Day"></label>
+                                    <input asp-for="Day" class="form-control" />
+                                    <span asp-validation-for="Day"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Month"></label>
+                                    <input asp-for="Month" class="form-control" />
+                                    <span asp-validation-for="Month"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="EventAbout"></label>
+                                    <input asp-for="EventAbout" class="form-control" />
+                                    <span asp-validation-for="EventAbout"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="EventPlace"></label>
+                                    <input asp-for="EventPlace" class="form-control" />
+                                    <span asp-validation-for="EventPlace"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="EventStart"></label>
+                                    <input asp-for="EventStart" class="form-control" />
+                                    <span asp-validation-for="EventStart"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="EventFinish"></label>
+                                    <input asp-for="EventFinish" class="form-control" />
+                                    <span asp-validation-for="EventFinish"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h5 class="mt-2">Speaker 1</h5>
+                        <select name="speakeroneId" id="speakeroneId" class="form-control mt-3">
+                            @foreach (var speaker in ViewBag.Speakers)
+                            {
+                                if (speaker.Id == Model.Speakers.ElementAt(0).EventId)
+                                {
+                                    <option selected value="@speaker.Id">@speaker.Name @speaker.Surname</option>
+                                }
+                                else
+                                {
+                                    <option value="@speaker.Id">@speaker.Name @speaker.Surname</option>
+                                }
+
+                            }
+                        </select>
+                        <h5 class="mt-2">Speaker 2</h5>
+                        <select name="speakertwoId" id="speakertwoId" class="form-control mt-3">
+                            @foreach (var speaker in ViewBag.Speakers)
+                            {
+                                if (speaker.Id == Model.Speakers.ElementAt(1).EventId)
+                                {
+                                    <option selected value="@speaker.Id">@speaker.Name @speaker.Surname</option>
+                                }
+                                else
+                                {
+                                    <option value="@speaker.Id">@speaker.Name @speaker.Surname</option>
+                                }
+                            }
+                        </select>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary">Update</button>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="NeWEvent" asp-action="Index" asp-area="AdminPanel"> Back </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <div class="author">
+
+                                <div class="form-group d-flex flex-column">
+                                    <label asp-for="Photo" class="h2 text-white mb-5" style="font-size:18px;"></label>
+                                    <input asp-for="Photo" accept="image/*" class="form-control">
+                                    <span asp-validation-for="Photo" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+

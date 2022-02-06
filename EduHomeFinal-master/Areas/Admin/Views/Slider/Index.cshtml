@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Slider>
+@{
+    ViewData["Title"] = "Index";
+    int count = Model.Count();
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h2 class="card-title">Slider Table</h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr class="text-center font-weight-bold">
+                                    <th>
+                                        Image
+                                    </th>
+                                    <th>
+                                        Title
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Settings
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="text-center font-weight-bold">
+
+
+                                @foreach (Slider slide in Model)
+                                {
+
+                                    <tr class="text-center imagecolon">
+                                        <td>
+                                            <img src="~/Assets/img/slider/@slide.Image" style="width:300px;height:120px;object-fit:cover;"/>
+
+                                        </td>
+                                        <td>
+                                            @slide.Title
+                                        </td>
+                                        <td>
+                                            @Html.Raw(slide.Description)
+                                        </td>
+                                        <td>
+                                                <a class="btn btn-primary my-2 float-right deletebtn" asp-action="Delete" asp-route-id="@slide.Id"> Delete </a>
+                                            <a class="btn btn-primary my-1 float-right" asp-controller="Slider" asp-action="Update" asp-area="Admin" asp-route-id="@slide.Id"> Update </a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+                        <a class="btn btn-primary my-1 float-right" asp-controller="Slider" asp-action="Create" asp-area="Admin"> Create </a>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="Dashboard" asp-action="Index" asp-area="Admin"> Back </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
