@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nc6LAcddOIRtKda2gM9OMopF9jOfFLUL6j9MT7CWHYqOozSQi4MF7xPeVx3VIYMl6sr38D7UBEMH+6BVGE6imw==",
+  "dgSpecHash": "guIk3+BCiZeG+FG973Hu9wpwHBBWuyMV+pgiah7+ua/oBbQKfoRqyw0/mMo/a6sY23Nc81ZJAZHgnfvIDBJWOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nmasi\\Desktop\\Back-end-2021-main\\EduHomeFinal-master\\EduHomeFinal.csproj",
+  "projectFilePath": "C:\\Users\\nmasi\\Desktop\\BackEndProject-NurkhanMasimzade\\EduHomeFinal-master\\EduHomeFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nmasi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.14\\microsoft.aspnetcore.cryptography.internal.3.1.14.nupkg.sha512",
     "C:\\Users\\nmasi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.14\\microsoft.aspnetcore.cryptography.keyderivation.3.1.14.nupkg.sha512",

@@ -8630,11 +8630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nmasi\\Desktop\\Back-end-2021-main\\EduHomeFinal-master\\EduHomeFinal.csproj",
+      "projectUniqueName": "C:\\Users\\nmasi\\Desktop\\BackEndProject-NurkhanMasimzade\\EduHomeFinal-master\\EduHomeFinal.csproj",
       "projectName": "EduHomeFinal",
-      "projectPath": "C:\\Users\\nmasi\\Desktop\\Back-end-2021-main\\EduHomeFinal-master\\EduHomeFinal.csproj",
+      "projectPath": "C:\\Users\\nmasi\\Desktop\\BackEndProject-NurkhanMasimzade\\EduHomeFinal-master\\EduHomeFinal.csproj",
       "packagesPath": "C:\\Users\\nmasi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nmasi\\Desktop\\Back-end-2021-main\\EduHomeFinal-master\\obj\\",
+      "outputPath": "C:\\Users\\nmasi\\Desktop\\BackEndProject-NurkhanMasimzade\\EduHomeFinal-master\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nmasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
