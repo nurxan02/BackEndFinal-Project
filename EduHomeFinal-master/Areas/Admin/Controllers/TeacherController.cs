@@ -51,10 +51,6 @@ namespace EduHomeFinal.Areas.Admin.Controllers
         {
             if (id == null)
                 return NotFound();
-            //if (!ModelState.IsValid)
-            //{
-            //    return View();
-            //}
             if (ModelState["PhotoTeacher"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
             {
                 return View();

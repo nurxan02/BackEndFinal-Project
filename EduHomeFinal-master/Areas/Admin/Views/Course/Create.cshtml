@@ -1,7 +1,147 @@
-﻿
+﻿@model Courses
+
 @{
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="title">Update Course</h3>
+                    </div>
+                    <div class="card-body w-100">
 
+                        <div class="row ">
+                            <div asp-validation-summary="ModelOnly" class="text-white"></div>
+                            <div class="col-md-12 px-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Name" class="ml-3"></label>
+                                    <input asp-for="Name" class="form-control">
+                                    <span asp-validation-for="Name"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Description"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Duration"></label>
+                                    <input asp-for="Duration" class="form-control" />
+                                    <span asp-validation-for="Duration"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="ClassDuration"></label>
+                                    <input asp-for="ClassDuration" class="form-control" />
+                                    <span asp-validation-for="ClassDuration"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="SkillLevel"></label>
+                                    <input asp-for="SkillLevel" class="form-control" />
+                                    <span asp-validation-for="SkillLevel"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Language"></label>
+                                    <input asp-for="Language" class="form-control" />
+                                    <span asp-validation-for="Language"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="StudentCapacity"></label>
+                                    <input asp-for="StudentCapacity" class="form-control" />
+                                    <span asp-validation-for="StudentCapacity"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Assetsments"></label>
+                                    <input asp-for="Assetsments" class="form-control" />
+                                    <span asp-validation-for="Assetsments"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Fee"></label>
+                                    <input asp-for="Fee" class="form-control" />
+                                    <span asp-validation-for="Fee"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-md-1">
+                                <div class="form-group">
+                                    <label asp-for="Starts"></label>
+                                    <input asp-for="Starts" class="form-control" />
+                                    <span asp-validation-for="Starts"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary">Create</button>
+                        <a class="btn btn-primary mx-3 float-right" asp-controller="Course" asp-action="Index" asp-area="Admin"> Back </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <div class="author">
+
+                                <div class="form-group d-flex flex-column">
+                                    <label asp-for="PhotoCourse" class="h2 text-white mb-5" style="font-size:18px;"></label>
+                                    <input asp-for="PhotoCourse" accept="image/*" class="form-control">
+                                    <span asp-validation-for="PhotoCourse" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</div>

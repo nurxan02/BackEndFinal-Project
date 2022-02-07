@@ -121,8 +121,9 @@ namespace EduHomeFinal.Areas.Admin.Controllers
                 ModelState.AddModelError("PhotoCourse", "Size is bigger than 800kb");
                 return View();
             }
-
-            return View();
+            await _eduDb.Courses.AddAsync(courses);
+            await _eduDb.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
